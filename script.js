@@ -13,7 +13,7 @@ function addToDo(){
         return;
     }
 
-    let newTodo = {id: Math.random(), value: userInput};
+    let newTodo = {id: _.uniqueId(), value: userInput};
 
     todos.push(newTodo);
 
