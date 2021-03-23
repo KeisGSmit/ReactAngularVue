@@ -1,13 +1,13 @@
-let inputEl = document.querySelector('input');
-let buttonEl = document.querySelector('button');
-let ulEl = document.querySelector('ul');
+let inputEl = $('input');
+let buttonEl = $('button');
+let ulEl = $('ul');
 
 let todos = [];
 
-buttonEl.addEventListener('click', addToDo)
+buttonEl.click(addToDo);
 
 function addToDo(){
-    let userInput = inputEl.value;
+    let userInput = inputEl.val();
 
     if(userInput.trim() == ''){
         return;
@@ -17,18 +17,16 @@ function addToDo(){
 
     todos.push(newTodo);
 
-    let todoLi = document.createElement('LI');
-
-    todoLi.textContent = userInput
-    todoLi.addEventListener('click', removeToDo)
-    todoLi.dataset.id = newTodo.id;
-    ulEl.appendChild(todoLi)
+    $('<li>'+ userInput +'</li>')
+        .appendTo(ulEl)
+        .attr('dataset-id', newTodo.id)
+        .click(removeToDo);
     console.log(todos);
 };
 
 function removeToDo(event){
-    var clickedLi = event.target;
-    var itemId = clickedLi.dataset.id;
+    var clickedLi = $(this);
+    var itemId = clickedLi.attr('dataset-id');
 
     for(let i = 0; i<todos.length; i++){
         if(todos[i].id == itemId){
@@ -37,6 +35,6 @@ function removeToDo(event){
         }
     }
 
-    clickedLi.parentNode.removeChild(clickedLi);
+    clickedLi.remove();
     console.log(todos);
 };
