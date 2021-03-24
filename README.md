@@ -16,3 +16,6 @@ This is not made to be deployed, but rather to document my education proccess.
     - `v-bind:class=""` => `:class=""`
 -  `v-on:EVENT` => `@EVENT`
     - `v-on:click=""` => `@click=""`
+- Instances only control one part of the code
+    - top to bottom
+

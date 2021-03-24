@@ -1,3 +1,12 @@
+Vue.component('app-username', {
+    data: function(){
+        return{
+            username: 'Vanilla'
+        }
+    },
+    template: '<p>{{ username }}</p>'    
+});
+
 new Vue({
     el: '#app',
     data: {
