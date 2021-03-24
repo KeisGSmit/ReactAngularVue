@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>The world of Javascript</title>
 </head>
+
 <body>
     <div id="app">
         <p>{{ name }}</p>
@@ -15,12 +17,18 @@
         <button v-on:click="nameChange">Change Name</button>
         <button v-on:click="addElement">New Element</button>
         <ul>
-            <li v-for="element in elements" v-bind:id="'el'+ element">Element {{element}}</li>
+            <li 
+            v-for="element in elements" 
+            v-bind:id="'el'+ element"
+            v-bind:style="{
+                backgroundColor: getColor(element) 
+            }">Element {{element}}</li>
         </ul>
     </div>
-    
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 <script src="script.js"></script>
+
 </html>
