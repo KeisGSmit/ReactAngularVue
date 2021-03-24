@@ -10,8 +10,11 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ name }}</p>
-        <button v-on:click="nameChange">Change Name</button>
+        <input type="text" v-model="userInput">
+        <button v-on:click="addToDo" type="submit">Add To-Do</button>
+        <ul>
+            <li v-for="todo in todos" v-on:click="removeToDo(todo)">{{ todo.value }}</li>
+        </ul>
     </div>
     
 </body>
