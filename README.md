@@ -10,3 +10,9 @@ This is not made to be deployed, but rather to document my education proccess.
 - Angular
 - Vue
 - React
+
+## Side notes on Vue
+- `v-bind:PROPERTY` => `:PROPERTY`
+    - `v-bind:class=""` => `:class=""`
+-  `v-on:EVENT` => `@EVENT`
+    - `v-on:click=""` => `@click=""`

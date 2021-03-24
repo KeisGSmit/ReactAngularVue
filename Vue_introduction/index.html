@@ -12,15 +12,15 @@
 
 <body>
     <div id="app">
-        <p v-bind:class="{updated: name == 'Keis' ? false : true}" >{{ name }}</p>
+        <p :class="{updated: name == 'Keis' ? false : true}" >{{ name }}</p>
         <p v-if="name == 'Keis' ? false : true">Name Updated</p>
-        <button v-on:click="nameChange">Change Name</button>
-        <button v-on:click="addElement">New Element</button>
+        <button @click="nameChange">Change Name</button>
+        <button @click="addElement">New Element</button>
         <ul>
             <li 
             v-for="element in elements" 
-            v-bind:id="'el'+ element"
-            v-bind:style="{
+            :id="'el'+ element"
+            :style="{
                 backgroundColor: getColor(element) 
             }">Element {{element}}</li>
         </ul>
