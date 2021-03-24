@@ -12,7 +12,7 @@
 
 <body>
     <div id="app">
-        <app-username></app-username>
+        <app-username :username="'Vanilla'"></app-username>
         <p :class="{updated: name == 'Keis' ? false : true}" >{{ name }}</p>
         <p v-if="name == 'Keis' ? false : true">Name Updated</p>
         <button @click="nameChange">Change Name</button>
