@@ -19,3 +19,5 @@ This is not made to be deployed, but rather to document my education proccess.
 - Instances only control one part of the code
     - top to bottom
 
+- HTML is case sensitive
+
