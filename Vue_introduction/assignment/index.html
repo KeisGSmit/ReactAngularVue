@@ -1,7 +1,4 @@
-<script src="https://unpkg.com/vue"></script>
-
-<!-- 
-  1) Create a <div> and take control with a Vue Instance
+  <!--
   2) Output an array of hobbies in this <div> (provide some default hobbies)
   3) Add a 'New Hobby' button + <input> field where you add the hobby the user entered to the list
   4) Make the hobbies clickable to remove them once clicked
@@ -11,4 +8,27 @@
   8) Outsource your hobbies (the <li> elements) into a re-usable component
 -->
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <title>The world of Javascript</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <ul>
+      <li v-for="hobby in hobbies" id="hobby">Hobby: {{ hobby }}</li>
+    </ul>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 <script src="app.js"></script>
+
+</html>
