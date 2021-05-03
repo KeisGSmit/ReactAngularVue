@@ -1,3 +1,13 @@
+Vue.component('app-hobby', {
+    props: ['hobby'],
+    template: '<li v-on:click="rmvehobby">{{ hobby }}</li>',
+    methods: {
+        rmvehobby(){
+            this.$emit('removehoby', this.hobby);
+        }
+    }
+});
+
 
 new Vue({
     el: '#app',
