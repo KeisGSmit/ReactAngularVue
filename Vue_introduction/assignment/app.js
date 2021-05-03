@@ -2,7 +2,7 @@ Vue.component('app-hobby', {
     props: ['hobby'],
     template: '<li v-on:click="rmvehobby">{{ hobby }}</li>',
     methods: {
-        rmvehobby(){
+        rmvehobby() {
             this.$emit('removehoby', this.hobby);
         }
     }
@@ -23,8 +23,8 @@ new Vue({
 
     },
     methods: {
-        addHobby(){
-            if(this.userHobby.trim() == ''){
+        addHobby() {
+            if (this.userHobby.trim() == '') {
                 return
             }
             let addedHobby = this.userHobby
@@ -32,9 +32,9 @@ new Vue({
             this.deleted = false
 
         },
-        removeHobby(hobby){
+        removeHobby(hobby) {
             var position = this.hobbies.indexOf(hobby);
-            this.hobbies.splice(position,1);
+            this.hobbies.splice(position, 1);
             this.deleted = true
         }
     }

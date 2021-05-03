@@ -19,10 +19,7 @@
     <p v-bind:style="{color: hobbies.length > 3 ? 'red' : 'black' }"
       v-bind:class="{'multiple-hobbies' : hobbies.length > 3 }">Hobbies: {{hobbies.length}}</p>
     <ul>
-      <app-hobby
-      v-for="hby in hobbies"
-      v-bind:hobby="hby"
-      v-on:removehoby="removeHobby($event)"></app-hobby>
+      <app-hobby v-for="hby in hobbies" v-bind:hobby="hby" v-on:removehoby="removeHobby($event)"></app-hobby>
     </ul>
   </div>
 
