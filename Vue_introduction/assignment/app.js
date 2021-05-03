@@ -1,3 +1,4 @@
+
 new Vue({
     el: '#app',
     data: {
@@ -7,18 +8,23 @@ new Vue({
             'cricket',
             'football'
         ],
-        hobby: ''
+        userHobby: '',
+        deleted: false,
+
     },
     methods: {
         addHobby(){
-            if(this.hobby.trim() == ''){
+            if(this.userHobby.trim() == ''){
                 return
             }
-            let addedHobby = this.hobby
+            let addedHobby = this.userHobby
             this.hobbies.push(addedHobby);
-        },
-        // removeHobby(){
 
-        // }
+        },
+        removeHobby(hobby){
+            var position = this.hobbies.indexOf(hobby);
+            this.hobbies.splice(position,1);
+            this.deleted = true
+        }
     }
 });
