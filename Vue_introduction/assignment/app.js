@@ -19,6 +19,7 @@ new Vue({
             }
             let addedHobby = this.userHobby
             this.hobbies.push(addedHobby);
+            this.deleted = false
 
         },
         removeHobby(hobby){
