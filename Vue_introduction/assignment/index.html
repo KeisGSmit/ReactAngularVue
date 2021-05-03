@@ -1,6 +1,4 @@
   <!--
-  2) Output an array of hobbies in this <div> (provide some default hobbies)
-  3) Add a 'New Hobby' button + <input> field where you add the hobby the user entered to the list
   4) Make the hobbies clickable to remove them once clicked
   5) Add a <p>Hobby deleted!</p> which is only shown once at least one hobby was deleted (be creative on how to track this!)
   6) Add a hobby counter (<p>Hobbies: ...</p>) above the list of hobbies
@@ -22,8 +20,13 @@
 <body>
 
   <div id="app">
+    <input type="text" v-model="hobby">
+    <button v-on:click="addHobby">Add Hobby</button>
     <ul>
-      <li v-for="hobby in hobbies">{{ hobby }}</li>
+      <li 
+      v-for="hobby in hobbies" 
+      v-on:click="removeHobby"
+      v-bind:id="'hobby' + hobbies.length">{{ hobby }}</li>
     </ul>
   </div>
 
